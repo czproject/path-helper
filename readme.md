@@ -1,34 +1,48 @@
-Cz\Paths-helper
-===============
+# Cz\Paths-helper
 
 Helper class for generating relative paths, absolutizing paths, ...
 
-Usage
------
+## Usage
+
 
 ``` php
-<?php
 $helper = new Cz\PathsHelper;
-$helper->absolutizePath('path/to/my/../text/./file.txt');
-// Prints: 'path/to/text/file.txt'
+```
 
+### Absolutize paths
+
+``` php
+$helper->absolutizePath('path/to/my/../text/./file.txt');
+```
+
+Returns ```path/to/text/file.txt```
+
+
+### Generating relative paths
+
+``` php
 $source = 'root/dir/docs/1.0/index.html';
 $dest = 'root/dir/imgs/image.jpg';
 $helper->makeRelativePath($source, $dest);
-// Prints: '../../imgs/image.jpg'
+```
 
-$helper->isPathCurrent('dir/file.txt', 'dir/file-2.txt'); // return FALSE
-$helper->isPathCurrent('dir/file.txt', 'dir/*'); // return TRUE
-$helper->isPathCurrent('dir/sub/file.txt', 'dir/*'); // return FALSE
-$helper->isPathCurrent('dir/sub/file.txt', 'dir/*/*'); // return TRUE
-$helper->isPathCurrent('dir/sub/file.txt', 'dir/**'); // return TRUE
+Returns ```../../imgs/image.jpg```
+
+
+### Is given paths current?
+
+``` php
+$helper->isPathCurrent('dir/file.txt', 'dir/file-2.txt'); // returns FALSE
+$helper->isPathCurrent('dir/file.txt', 'dir/*'); // returns TRUE
+$helper->isPathCurrent('dir/sub/file.txt', 'dir/*'); // returns FALSE
+$helper->isPathCurrent('dir/sub/file.txt', 'dir/*/*'); // returns TRUE
+$helper->isPathCurrent('dir/sub/file.txt', 'dir/**'); // returns TRUE
 ```
 
 **Mask:** ```**``` means *everything*, ```*``` means *everything <b>except</b> ```/```*.
 
 
-Installation
-------------
+## Installation
 
 [Download a latest package](https://github.com/nette/tester/releases) or use [Composer](http://getcomposer.org/):
 
