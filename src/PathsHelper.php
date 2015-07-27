@@ -105,7 +105,7 @@
 		 * @param  string
 		 * @return string
 		 */
-		public function absolutizePath($path)
+		public function absolutizePath($path, $prefix = '/')
 		{
 			$path = explode('/', $path);
 			$buffer = array();
@@ -120,6 +120,6 @@
 				}
 			}
 
-			return implode('/', $buffer);
+			return $prefix . implode('/', $buffer);
 		}
 	}

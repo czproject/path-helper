@@ -15,7 +15,14 @@ $helper = new Cz\PathsHelper;
 $helper->absolutizePath('path/to/my/../text/./file.txt');
 ```
 
-Returns ```path/to/text/file.txt```
+Returns ```/path/to/text/file.txt```
+
+You can use second parameters ```$prefix```:
+
+``` php
+$helper->absolutizePath('path/to/my/../text/./file.txt', NULL); // returns path/to/text/file.txt
+$helper->absolutizePath('path/to/my/../text/./file.txt', '/file/root/'); // returns /file/root/path/to/text/file.txt
+```
 
 
 ### Generating relative paths
