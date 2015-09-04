@@ -13,7 +13,7 @@
 		 * @param  string
 		 * @return string  relative path
 		 */
-		public function makeRelativePath($source, $destination)
+		public function createRelativePath($source, $destination)
 		{
 			$source = ltrim($source, '/');
 			$destination = ltrim($destination, '/');

@@ -25,12 +25,12 @@ $helper->absolutizePath('path/to/my/../text/./file.txt', '/file/root/'); // retu
 ```
 
 
-### Generating relative paths
+### Creating relative paths
 
 ``` php
 $source = 'root/dir/docs/1.0/index.html';
 $dest = 'root/dir/imgs/image.jpg';
-$helper->makeRelativePath($source, $dest);
+$helper->createRelativePath($source, $dest);
 ```
 
 Returns ```../../imgs/image.jpg```
