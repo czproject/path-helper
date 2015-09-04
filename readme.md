@@ -1,6 +1,6 @@
 # CzProject\PathHelper
 
-Helper class for generating relative paths, absolutizing paths, ...
+Helper class for creating relative paths, absolutizing paths, ...
 
 ## Usage
 
@@ -9,9 +9,11 @@ Helper class for generating relative paths, absolutizing paths, ...
 $helper = new CzProject\PathHelper;
 ```
 
-### Absolutize paths
+### Absolutize path
 
 ``` php
+$helper->absolutizePath($path);
+
 $helper->absolutizePath('path/to/my/../text/./file.txt');
 ```
 
@@ -25,20 +27,23 @@ $helper->absolutizePath('path/to/my/../text/./file.txt', '/file/root/'); // retu
 ```
 
 
-### Creating relative paths
+### Creating relative path
 
 ``` php
 $source = 'root/dir/docs/1.0/index.html';
 $dest = 'root/dir/imgs/image.jpg';
+
 $helper->createRelativePath($source, $dest);
 ```
 
 Returns ```../../imgs/image.jpg```
 
 
-### Is given paths current?
+### Is given path current?
 
 ``` php
+$helper->isPathCurrent($path, $mask);
+
 $helper->isPathCurrent('dir/file.txt', 'dir/file-2.txt'); // returns FALSE
 $helper->isPathCurrent('dir/file.txt', 'dir/*'); // returns TRUE
 $helper->isPathCurrent('dir/sub/file.txt', 'dir/*'); // returns FALSE
@@ -54,7 +59,7 @@ $helper->isPathCurrent('dir/sub/file.txt', 'dir/**'); // returns TRUE
 [Download a latest package](https://github.com/nette/tester/releases) or use [Composer](http://getcomposer.org/):
 
 ```
-composer require [--dev] czproject/paths-helper
+composer require [--dev] czproject/path-helper
 ```
 
 Library requires PHP 5.3.0 or later.
