@@ -8,7 +8,7 @@ use Tester\Assert;
 require __DIR__ . '/bootstrap.php';
 require __DIR__ . '/../../src/PathHelper.php';
 
-$args = Tester\DataProvider::loadCurrent();
+$args = Tester\Environment::loadData();
 
 $h = new Cz\PathHelper;
 if ($args['result'] === '1') {
