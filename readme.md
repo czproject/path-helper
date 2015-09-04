@@ -6,7 +6,7 @@ Helper class for generating relative paths, absolutizing paths, ...
 
 
 ``` php
-$helper = new Cz\PathsHelper;
+$helper = new Cz\PathHelper;
 ```
 
 ### Absolutize paths

@@ -1,14 +1,12 @@
 <?php
 	/**
-	 * PathsHelper class
-	 *
 	 * @author  Jan Pecha, <janpecha@email.cz>
 	 * @license BSD-3 (see license.md file)
 	 */
 
 	namespace Cz;
 
-	class PathsHelper
+	class PathHelper
 	{
 		/**
 		 * @param  string

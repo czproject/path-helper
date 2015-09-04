@@ -2,9 +2,9 @@
 use Tester\Assert;
 
 require __DIR__ . '/bootstrap.php';
-require __DIR__ . '/../../src/PathsHelper.php';
+require __DIR__ . '/../../src/PathHelper.php';
 
-$h = new Cz\PathsHelper;
+$h = new Cz\PathHelper;
 
 Assert::same('.', $h->makeRelativePath('index.html', ''));
 Assert::same('.', $h->makeRelativePath('', ''));

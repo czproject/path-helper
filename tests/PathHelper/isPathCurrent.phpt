@@ -6,11 +6,11 @@
 use Tester\Assert;
 
 require __DIR__ . '/bootstrap.php';
-require __DIR__ . '/../../src/PathsHelper.php';
+require __DIR__ . '/../../src/PathHelper.php';
 
 $args = Tester\DataProvider::loadCurrent();
 
-$h = new Cz\PathsHelper;
+$h = new Cz\PathHelper;
 if ($args['result'] === '1') {
 	Assert::true($h->isPathCurrent($args['source'], $args['mask']));
 } else {

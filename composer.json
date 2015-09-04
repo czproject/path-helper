@@ -13,7 +13,7 @@
 		"php": ">=5.3.0"
 	},
 	"autoload": {
-		"classmap": ["src/PathsHelper.php"]
+		"classmap": ["src/PathHelper.php"]
 	},
 	"require-dev": {
 		"nette/tester": "~1.0"
