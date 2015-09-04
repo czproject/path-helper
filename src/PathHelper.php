@@ -4,7 +4,7 @@
 	 * @license BSD-3 (see license.md file)
 	 */
 
-	namespace Cz;
+	namespace CzProject;
 
 	class PathHelper
 	{

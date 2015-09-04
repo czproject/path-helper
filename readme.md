@@ -1,4 +1,4 @@
-# Cz\Paths-helper
+# CzProject\PathHelper
 
 Helper class for generating relative paths, absolutizing paths, ...
 
@@ -6,7 +6,7 @@ Helper class for generating relative paths, absolutizing paths, ...
 
 
 ``` php
-$helper = new Cz\PathHelper;
+$helper = new CzProject\PathHelper;
 ```
 
 ### Absolutize paths

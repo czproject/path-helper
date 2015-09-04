@@ -10,5 +10,5 @@ require __DIR__ . '/../../src/PathHelper.php';
 
 $args = Tester\Environment::loadData();
 
-$h = new Cz\PathHelper;
+$h = new CzProject\PathHelper;
 Assert::same($args['result'], $h->absolutizePath($args['path']));

@@ -4,7 +4,7 @@ use Tester\Assert;
 require __DIR__ . '/bootstrap.php';
 require __DIR__ . '/../../src/PathHelper.php';
 
-$h = new Cz\PathHelper;
+$h = new CzProject\PathHelper;
 
 Assert::true($h->isPathCurrent('index.html', '*'));
 

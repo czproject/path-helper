@@ -10,7 +10,7 @@ require __DIR__ . '/../../src/PathHelper.php';
 
 $args = Tester\Environment::loadData();
 
-$h = new Cz\PathHelper;
+$h = new CzProject\PathHelper;
 if ($args['result'] === '1') {
 	Assert::true($h->isPathCurrent($args['source'], $args['mask']));
 } else {
