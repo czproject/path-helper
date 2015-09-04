@@ -1,7 +1,7 @@
 {
 	"name": "czproject/path-helper",
 	"type": "library",
-	"description": "Helper class for generating relative paths, absolutizing paths,…",
+	"description": "Helper class for creating relative paths, absolutizing, etc.",
 	"license": "BSD-3-Clause",
 	"authors": [
 		{
