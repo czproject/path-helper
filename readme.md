@@ -56,7 +56,7 @@ $helper->isPathCurrent('dir/sub/file.txt', 'dir/**'); // returns TRUE
 
 ## Installation
 
-[Download a latest package](https://github.com/nette/tester/releases) or use [Composer](http://getcomposer.org/):
+[Download a latest package](https://github.com/czproject/path-helper/releases) or use [Composer](http://getcomposer.org/):
 
 ```
 composer require [--dev] czproject/path-helper
