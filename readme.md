@@ -19,7 +19,7 @@ $helper->absolutizePath('path/to/my/../text/./file.txt');
 
 Returns ```/path/to/text/file.txt```
 
-You can use second parameters ```$prefix```:
+You can use second parameter ```$prefix```:
 
 ``` php
 $helper->absolutizePath('path/to/my/../text/./file.txt', NULL); // returns path/to/text/file.txt
@@ -39,7 +39,7 @@ $helper->createRelativePath($source, $dest);
 Returns ```../../imgs/image.jpg```
 
 
-### Is given path current?
+### Is path current?
 
 ``` php
 $helper->isPathCurrent($path, $mask);
@@ -51,7 +51,10 @@ $helper->isPathCurrent('dir/sub/file.txt', 'dir/*/*'); // returns TRUE
 $helper->isPathCurrent('dir/sub/file.txt', 'dir/**'); // returns TRUE
 ```
 
-**Mask:** ```**``` means *everything*, ```*``` means *everything <b>except</b> ```/```*.
+| Mask     | Meaning
+| -------- | ------------------------------------------
+| ```**``` | means *everything*
+| ```*```  | means *everything <b>except</b> ```/```*
 
 
 ## Installation
@@ -59,7 +62,7 @@ $helper->isPathCurrent('dir/sub/file.txt', 'dir/**'); // returns TRUE
 [Download a latest package](https://github.com/czproject/path-helper/releases) or use [Composer](http://getcomposer.org/):
 
 ```
-composer require [--dev] czproject/path-helper
+composer require czproject/path-helper
 ```
 
 Library requires PHP 5.3.0 or later.
