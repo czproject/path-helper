@@ -6,15 +6,15 @@ Helper class for creating relative paths, absolutizing paths, ...
 
 
 ``` php
-$helper = new CzProject\PathHelper;
+use CzProject\PathHelper;
 ```
 
 ### Absolutize path
 
 ``` php
-$helper->absolutizePath($path);
+PathHelper::absolutizePath($path);
 
-$helper->absolutizePath('path/to/my/../text/./file.txt');
+PathHelper::absolutizePath('path/to/my/../text/./file.txt');
 ```
 
 Returns ```/path/to/text/file.txt```
@@ -22,8 +22,8 @@ Returns ```/path/to/text/file.txt```
 You can use second parameter ```$prefix```:
 
 ``` php
-$helper->absolutizePath('path/to/my/../text/./file.txt', NULL); // returns path/to/text/file.txt
-$helper->absolutizePath('path/to/my/../text/./file.txt', '/file/root/'); // returns /file/root/path/to/text/file.txt
+PathHelper::absolutizePath('path/to/my/../text/./file.txt', NULL); // returns path/to/text/file.txt
+PathHelper::absolutizePath('path/to/my/../text/./file.txt', '/file/root/'); // returns /file/root/path/to/text/file.txt
 ```
 
 
@@ -33,7 +33,7 @@ $helper->absolutizePath('path/to/my/../text/./file.txt', '/file/root/'); // retu
 $source = 'root/dir/docs/1.0/index.html';
 $dest = 'root/dir/imgs/image.jpg';
 
-$helper->createRelativePath($source, $dest);
+PathHelper::createRelativePath($source, $dest);
 ```
 
 Returns ```../../imgs/image.jpg```
@@ -42,19 +42,29 @@ Returns ```../../imgs/image.jpg```
 ### Is path current?
 
 ``` php
-$helper->isPathCurrent($path, $mask);
+PathHelper::isPathCurrent($path, $mask);
 
-$helper->isPathCurrent('dir/file.txt', 'dir/file-2.txt'); // returns FALSE
-$helper->isPathCurrent('dir/file.txt', 'dir/*'); // returns TRUE
-$helper->isPathCurrent('dir/sub/file.txt', 'dir/*'); // returns FALSE
-$helper->isPathCurrent('dir/sub/file.txt', 'dir/*/*'); // returns TRUE
-$helper->isPathCurrent('dir/sub/file.txt', 'dir/**'); // returns TRUE
+PathHelper::isPathCurrent('dir/file.txt', 'dir/file-2.txt'); // returns FALSE
+PathHelper::isPathCurrent('dir/file.txt', 'dir/*'); // returns TRUE
+PathHelper::isPathCurrent('dir/sub/file.txt', 'dir/*'); // returns FALSE
+PathHelper::isPathCurrent('dir/sub/file.txt', 'dir/*/*'); // returns TRUE
+PathHelper::isPathCurrent('dir/sub/file.txt', 'dir/**'); // returns TRUE
 ```
 
 | Mask     | Meaning
 | -------- | ------------------------------------------
 | ```**``` | means *everything*
 | ```*```  | means *everything <b>except</b> ```/```*
+
+
+### Helper instance
+
+``` php
+$helper = new CzProject\PathHelper;
+$helper->absolutizePath('/path/to/to/../file');
+$helper->createRelativePath('/path/to/file', '/path/to');
+$helper->isPathCurrent('/path/file', '/path/*');
+```
 
 
 ## Installation

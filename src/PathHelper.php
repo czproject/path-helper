@@ -13,7 +13,7 @@
 		 * @param  string
 		 * @return string  relative path
 		 */
-		public function createRelativePath($source, $destination)
+		public static function createRelativePath($source, $destination)
 		{
 			$source = ltrim($source, '/');
 			$destination = ltrim($destination, '/');
@@ -69,7 +69,7 @@
 		 * @param  string
 		 * @return boolean
 		 */
-		public function isPathCurrent($currentPath, $mask)
+		public static function isPathCurrent($currentPath, $mask)
 		{
 			// $path muze obsahovat wildcard (*)
 			// Priklady:
@@ -103,7 +103,7 @@
 		 * @param  string
 		 * @return string
 		 */
-		public function absolutizePath($path, $prefix = '/')
+		public static function absolutizePath($path, $prefix = '/')
 		{
 			$path = explode('/', $path);
 			$buffer = array();
