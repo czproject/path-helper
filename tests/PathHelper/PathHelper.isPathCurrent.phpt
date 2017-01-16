@@ -21,4 +21,3 @@ Assert::true(PathHelper::isPathCurrent('en/about/contact/index.html', 'en/**'));
 Assert::true(PathHelper::isPathCurrent('cs/contact', '*/contact'));
 Assert::true(PathHelper::isPathCurrent('en/contact', '*/contact'));
 Assert::false(PathHelper::isPathCurrent('en/about/contact', '*/contact'));
-

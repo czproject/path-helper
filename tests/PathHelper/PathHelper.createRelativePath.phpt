@@ -37,4 +37,3 @@ Assert::same('download.html', PathHelper::createRelativePath('docs/v0.9/index.ht
 
 Assert::same('../sub', PathHelper::createRelativePath('section/sub/page', 'section/sub'));
 Assert::same('../../section', PathHelper::createRelativePath('section/sub/page', 'section'));
-

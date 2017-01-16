@@ -82,4 +82,3 @@ Library requires PHP 5.3.0 or later.
 
 License: [New BSD License](license.md)
 <br>Author: Jan Pecha, http://janpecha.iunas.cz/
-
