@@ -1,5 +1,7 @@
 # CzProject\PathHelper
 
+[![Build Status](https://travis-ci.org/czproject/path-helper.svg?branch=master)](https://travis-ci.org/czproject/path-helper)
+
 Helper class for creating relative paths, absolutizing paths, ...
 
 ## Usage
