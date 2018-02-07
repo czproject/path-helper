@@ -2,7 +2,10 @@
 
 [![Build Status](https://travis-ci.org/czproject/path-helper.svg?branch=master)](https://travis-ci.org/czproject/path-helper)
 
-Helper class for creating relative paths, absolutizing paths, ...
+Helper class for creating relative paths, absolutizing paths,...
+
+<a href="https://www.patreon.com/bePatron?u=9680759"><img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Become a Patron!" height="35"></a>
+
 
 ## Usage
 
