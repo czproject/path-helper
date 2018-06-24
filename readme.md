@@ -8,6 +8,17 @@ Helper class for creating relative paths, absolutizing paths,...
 <a href="https://www.paypal.me/janpecha/1eur"><img src="https://buymecoffee.intm.org/img/button-paypal-white.png" alt="Buy me a coffee" height="35"></a>
 
 
+## Installation
+
+[Download a latest package](https://github.com/czproject/path-helper/releases) or use [Composer](http://getcomposer.org/):
+
+```
+composer require czproject/path-helper
+```
+
+Library requires PHP 5.3.0 or later.
+
+
 ## Usage
 
 
@@ -84,17 +95,6 @@ $helper->absolutizePath('/path/to/to/../file');
 $helper->createRelativePath('/path/to/file', '/path/to');
 $helper->isPathCurrent('/path/file', '/path/*');
 ```
-
-
-## Installation
-
-[Download a latest package](https://github.com/czproject/path-helper/releases) or use [Composer](http://getcomposer.org/):
-
-```
-composer require czproject/path-helper
-```
-
-Library requires PHP 5.3.0 or later.
 
 
 ------------------------------
