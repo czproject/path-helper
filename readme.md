@@ -63,6 +63,19 @@ PathHelper::isPathCurrent('dir/sub/file.txt', 'dir/**'); // returns TRUE
 | ```*```  | means *everything <b>except</b> ```/```*
 
 
+### Normalize path
+
+Normalizes path delimiters to `/`.
+
+``` php
+PathHelper::normalizePath($path);
+
+PathHelper::normalizePath('\\path\\to\\file.txt');
+```
+
+Returns `/path/to/file.txt`.
+
+
 ### Helper instance
 
 ``` php

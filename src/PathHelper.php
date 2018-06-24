@@ -120,4 +120,15 @@
 
 			return $prefix . implode('/', $buffer);
 		}
+
+
+		/**
+		 * Normalizes path delimiter to '/'
+		 * @param  string
+		 * @return string
+		 */
+		public static function normalizePath($path)
+		{
+			return strtr($path, '\\', '/');
+		}
 	}
