@@ -9,8 +9,8 @@
 	class PathHelper
 	{
 		/**
-		 * @param  string
-		 * @param  string
+		 * @param  string $source
+		 * @param  string $destination
 		 * @return string  relative path
 		 */
 		public static function createRelativePath($source, $destination)
@@ -65,9 +65,9 @@
 
 
 		/**
-		 * @param  string
-		 * @param  string
-		 * @return boolean
+		 * @param  string $currentPath
+		 * @param  string $mask
+		 * @return bool
 		 */
 		public static function isPathCurrent($currentPath, $mask)
 		{
@@ -100,7 +100,8 @@
 
 		/**
 		 * Generates absolute path (resolves '..' and '.' parts)
-		 * @param  string
+		 * @param  string $path
+		 * @param  string $prefix
 		 * @return string
 		 */
 		public static function absolutizePath($path, $prefix = '/')
@@ -124,7 +125,7 @@
 
 		/**
 		 * Normalizes path delimiter to '/'
-		 * @param  string
+		 * @param  string $path
 		 * @return string
 		 */
 		public static function normalizePath($path)
