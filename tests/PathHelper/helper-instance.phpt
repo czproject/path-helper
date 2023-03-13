@@ -3,8 +3,7 @@
 use CzProject\PathHelper;
 use Tester\Assert;
 
-require __DIR__ . '/bootstrap.php';
-require __DIR__ . '/../../src/PathHelper.php';
+require __DIR__ . '/../bootstrap.php';
 
 $helper = new PathHelper;
 Assert::same('/path/to/file', $helper->absolutizePath('/path/to/to/../file'));

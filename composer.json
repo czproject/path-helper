@@ -19,6 +19,6 @@
 		"classmap": ["src/PathHelper.php"]
 	},
 	"require-dev": {
-		"nette/tester": "^1.7"
+		"nette/tester": "^2.0"
 	}
 }
