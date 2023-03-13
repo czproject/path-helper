@@ -43,7 +43,7 @@
 				$padLeft += (!$destinationCount) ? 1 : 0;
 
 				if ($destinationCount === 1 && $destination[0] === '') { // remove empty '' (prevents '../', gets '..')
-					$destination = array();
+					$destination = [];
 					$destinationCount = 0;
 				} elseif ($destinationCount === 0) {
 					end($source);
@@ -52,7 +52,7 @@
 						$part = prev($source);
 						$k--;
 					}
-					$destination = array($part);
+					$destination = [$part];
 					$padLeft++;
 				}
 
@@ -88,10 +88,10 @@
 			}
 
 			// build pattern
-			$pattern = strtr(preg_quote($mask, '#'), array(
+			$pattern = strtr(preg_quote($mask, '#'), [
 				'\*\*' => '.*',
 				'\*' => '[^/]*',
-			));
+			]);
 
 			// match
 			return (bool) preg_match('#^' . $pattern . '\z#i', $currentPath);
@@ -107,7 +107,7 @@
 		public static function absolutizePath($path, $prefix = '/')
 		{
 			$path = explode('/', $path);
-			$buffer = array();
+			$buffer = [];
 
 			foreach ($path as $part) {
 				if ($part === '' || $part === '.') { // // || /./
