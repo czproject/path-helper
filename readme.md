@@ -1,6 +1,9 @@
 # CzProject\PathHelper
 
-[![Build Status](https://travis-ci.org/czproject/path-helper.svg?branch=master)](https://travis-ci.org/czproject/path-helper)
+[![Build Status](https://github.com/czproject/path-helper/workflows/Build/badge.svg)](https://github.com/czproject/path-helper/actions)
+[![Downloads this Month](https://img.shields.io/packagist/dm/czproject/path-helper.svg)](https://packagist.org/packages/czproject/path-helper)
+[![Latest Stable Version](https://poser.pugx.org/czproject/path-helper/v/stable)](https://github.com/czproject/path-helper/releases)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/czproject/path-helper/blob/master/license.md)
 
 Helper class for creating relative paths, absolutizing paths,...
 
