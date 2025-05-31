@@ -18,7 +18,7 @@ Helper class for creating relative paths, absolutizing paths,...
 composer require czproject/path-helper
 ```
 
-Library requires PHP 5.6.0 or later.
+Library requires PHP 5.6 or later.
 
 
 ## Usage
