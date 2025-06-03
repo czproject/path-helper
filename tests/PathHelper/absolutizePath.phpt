@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @dataProvider data-absolutize-path.ini
  */

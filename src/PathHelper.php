@@ -1,4 +1,6 @@
 <?php
+
+	declare(strict_types=1);
 	/**
 	 * @author  Jan Pecha, <janpecha@email.cz>
 	 * @license BSD-3 (see license.md file)
