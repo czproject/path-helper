@@ -13,7 +13,7 @@ require __DIR__ . '/../bootstrap.php';
 
 $args = Tester\Environment::loadData();
 
-if ($args['result'] === '1') {
+if ($args['result'] === '1' || $args['result'] === TRUE) {
 	Assert::true(PathHelper::isPathCurrent($args['source'], $args['mask']));
 
 } else {
